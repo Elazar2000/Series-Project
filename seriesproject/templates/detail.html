@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src ="{{series.img.url}}" width ="250" height = "200">
+        </div>
+        <div class="col-md-6">
+            <h2>{{series.name}}</h2>
+            <h4>{{series.disc}}</h4>
+            <h6>{{series.year}}</h6>
+            <a class= "btn btn-warning" href = "{% url 'seriesapp:update' series.id %}">Update Series</a>
+            <a class= "btn btn-danger" href = "{% url 'seriesapp:delete' series.id %}">Delete Series</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
